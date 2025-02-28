@@ -3,76 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escape Artisan</title>
-    <link rel="https://www.escapeartisan.com/about">
-</head>
-<style>
-    .{
-        margin: 0;
-        padding: 0;
-    }
-    .main{
-        width: 100%;
-        background: -o-linear-gradient(to top,color:rgb(red, green, blue),url(travelling img.jpg));
-        background-position:center;
-        background-size: cover;
-        height: 100;
-        font-family: sans-serif;
-    }
-    .navbar{
-        width: 95%;
-        height: auto;
-        margin-left: 30px;
-    }
-    .logo{
-        color:crimson;
-        font-size: 40px;
-        font-family: 'Courier New', Courier, monospace;
-        float: left;
-        padding-top: .6%;
-        cursor: pointer;
-    }
-    .menu{
-        width: 600;
-        float: left;
-        height: 70px;
-    }
-    ul{
-        float: left;
-        display: flex;
-        padding-top: 30px;
-        justify-content: center;
-        align-items: center;
-        margin-left: 14%;
-    }
-    ul li{
-        list-style: none;
-        margin-left: 60px;
-        font-size: 16px;
+    <title>Travel Adventures</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
 
-    }
-    ul li a{
-        text-decoration: none;
-        color:fuchsia;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-weight: bold;
-    }
-</style>
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background-image: url('travelling img.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 10rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .destinations {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .destination-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .destination {
+            border: 1px solid #ddd;
+            padding: 1rem;
+        }
+
+        .destination img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 0.5rem 0;
+            }
+
+            .hero {
+                padding: 5rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
 <body>
-    <div class="main">
-        <div class="navbar">
-            <h2 class="logo">:Travel</h2>
-        </div>
-        <div class="menu">
+    <header>
+        <h1>Travel Adventures</h1>
+        <nav>
             <ul>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="https://www.escapeartisan.com/about">About</a></li>
+                <li><a href="https://www.escapeartisan.com/blank-2">Services</a></li>
+                <li><a href="https://www.escapeartisan.com/blog">Blog</a></li>
+                <li><a href="https://www.escapeartisan.com/contact">Contact</a></li>
             </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Explore the World</h1>
+        <p>Discover amazing destinations and create unforgettable memories.</p>
+    </section>
+
+    <section class="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destination-grid">
+            <div class="destination">
+                <img src="tajmahal.jpg" alt="Destination 1">
+                <h3>Tajmahal, Agra</h3>
+                <p>Agra is a city on the banks of the Yamuna river in the Indian state of Uttar Pradesh, about 230 kilometres south-east of the national capital Delhi and 330 km west of the state capital Lucknow. Agra is the fourth-most populous city in Uttar Pradesh and twenty-third most populous city in India.</p>
+            </div>
+            <div class="destination">
+                <img src="kerala boat.jpg" alt="Destination 2">
+                <h3>kerala</h3>
+                <p>Kerala, a state on India's tropical Malabar Coast, has nearly 600km of Arabian Sea shoreline. It's known for its palm-lined beaches and backwaters, a network of canals. Inland are the Western Ghats, mountains whose slopes support tea, coffee and spice plantations as well as wildlife. National parks like Eravikulam and Periyar, plus Wayanad and other sanctuaries, are home to elephants, langur monkeys and tigers.</p>
+            </div>
+            <div class="destination">
+                <img src="jaipur mahal.jpg" alt="Destination 3">
+                <h3>Jaipur the Pink City in Rajasthan</h3>
+                <p>Jaipur is the capital of India’s Rajasthan state. It evokes the royal family that once ruled the region and that, in 1727, founded what is now called the Old City, or “Pink City” for its trademark building color. At the center of its stately street grid stands the opulent, colonnaded City Palace complex. With gardens, courtyards and museums, part of it is still a royal residence.</p>
+            </div>
+            <div class="destination">
+                <img src="chikkamangaluru.jpg" alt="Destination 4">
+                <h3>chikkamangaluru</h3>
+                <p>Chikmagalur is a hill station in Karnataka, a state in southwest India. To the north is Baba Budangiri, a mountain range in the Western Ghats, with 3 large caves said to be holy. Trails through forests and grasslands lead up to Mullayanagiri Peak. The cascading Hebbe Falls lie in an area of coffee plantations. The forested Bhadra Wildlife Sanctuary, northwest of Chikmagalur, is home to elephants, tigers and leopards.</p>
+            </div>
+            <div class="destination">
+                <img src="manali.jpg" alt="Destination 5">
+                <h3>Manali</h3>
+                <p>Manali is a high-altitude Himalayan resort town in India’s northern Himachal Pradesh state. It has a reputation as a backpacking center and honeymoon destination. Set on the Beas River, it is a gateway for skiing in the Solang Valley and trekking in Parvati Valley. It's also a jumping-off point for paragliding, rafting and mountaineering in the Pir Panjal mountains, home to 4,000m-high Rohtang Pass.</p>
+            </div>
+            <div class="destination">
+              <img src="vizag.jpg" alt="Destination 6">
+              <h3>Visakhapatnam</h3>
+              <p>Visakhapatnam is a port city and industrial center in the Indian state of Andhra Pradesh, on the Bay of Bengal. It's known for its many beaches, including Ramakrishna Beach.</p>
+            </div>
         </div>
-       
-    </div>
-    
+    </section>
+
+    <footer>
+        <p>2025 Travel Adventures</p>
+    </footer>
 </body>
 </html>
