@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes with width and height</title>
+    <style>
+         #my-Shape {
+
+
+         }
+    </style>
+</head>
+<body>
+    <form id="Shape-form">
+        <label for="Shape-select">Select Shape</label>
+        <Select id="Shape-select">
+            <option value="Circle">Circle</option>
+            <option value="triangle">triangle</option>
+            <option value="Rectangle">Rectangle</option>
+            <option value="Square">Square</option>
+        </Select><br><br>
+
+        <label for="width-input">width</label>
+        <input type="number" id="width-input" value="100%"><br><br>
+
+        <label for="height-input">height</label>
+        <input type="number" id="height-input" value="100%"><br><br>
+
+        <button type="button" id="draw button">Draw Shape</button>
+    </form>
+
+    <div id="my-shape"></div>
+    <script>
+        const Shapeselect = document.getElementById('shape-select');
+        const widthinput = document.getElementById('width-input');
+        const heightinput = document.getElementById('height-select');
+        const drawbutton = document.getElementById('draw-button');
+        const myshape = document.getElementById('my-shape');
+
+        drawbutton.addEventListener('click', function() {
+            const shape = Shapeselect.value;
+            const width = widthinput.value + 'px';
+            const height = heightinput.value + 'px';
+
+            myShape.style.width = width;
+            myShape.style.height = height;
+
+            if (shape == 'circle') {
+                myShape.style.borderRadius = '50%';
+            }
+            else if (shape == 'triangle') {
+                myShape.style.borderRadius = 0;
+            }
+            else if (shape == 'Rectangle') {
+                myShape.style.borderRadius = 0;
+            }
+            else if (shape =='Square') {
+                myShape.style.borderRadius = 0;
+            }
+        });
+
+            Shapeselect.addEventListener('change', function() {
+              if (this.value === 'Circle') {
+                heightInput.value = widthInput.value;
+            } else if (this.value === 'Square') {
+                heightInput.value = widthInput.value;
+            }
+        });
+
+
+
+
+
+
+            
+        
+        
+        
+
+    </script>
+    
+</body>
+</html>
