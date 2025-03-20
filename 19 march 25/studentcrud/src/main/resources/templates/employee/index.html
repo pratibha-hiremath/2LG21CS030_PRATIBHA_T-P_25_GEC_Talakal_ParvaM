@@ -22,6 +22,8 @@
         <th>phone</th>
         <th>Dob</th>
         <th>gender</th>
+        <th>language</th>
+        <th>education</th>
         <th>Action</th>
 
       </tr>
@@ -33,7 +35,9 @@
         <td  th:text="${emp.email}"></td>
         <td  th:text="${emp.phone}"></td>
         <td  th:text="${emp.dob}"></td>
-        <td  th:text="${emp.gender}"></td>
+        <td  th:text="${emp.Gender}"></td>
+        <td  th:text="${emp.language}"></td>
+        <td  th:text="${emp.education}"></td>
         <td>
           <a th:href="@{/pratibha/edit/{id}(id=${emp.id})}" class="btn btn-primary">Edit</a>
           <a th:href="@{/pratibha/delete/{id}(id=${emp.id})}" class="btn btn-danger">Delete</a>

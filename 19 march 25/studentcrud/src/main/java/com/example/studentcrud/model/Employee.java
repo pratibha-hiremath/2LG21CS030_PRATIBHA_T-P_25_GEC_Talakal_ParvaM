@@ -16,8 +16,10 @@ public class Employee {
     private String name;
     private String email;
     private String phone;
-     private String dob;
-      private String gender;
+    private String dob;
+    private String gender;
+    private String language;
+    private String education;
     
     public Long getId( ) {
         return id;
@@ -55,6 +57,18 @@ public class Employee {
     }
     public void setGender(String gender){
         this.gender = gender;
+    }
+    public String getLanguage(){
+        return language;
+    }
+    public void setLanguage(String language){
+        this.language = language;
+    }
+    public String getEducation(){
+        return education;
+    }
+    public void setEducation(String education){
+        this.education = education;
     }
 
 
