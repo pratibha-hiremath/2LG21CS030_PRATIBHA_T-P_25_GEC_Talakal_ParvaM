@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Profile Form</title>
+    <style>
+        .profile-card {
+            width: 150px;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .profile-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Profile Form</h1>
+
+    <form action="/addProfile" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br><br>
+
+        <label for="favoriteColor">Favorite Color:</label><br>
+        <input type="text" id="favoriteColor" name="favoriteColor"><br><br>
+
+        <label for="fontSize">Font Size:</label><br>
+        <input type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);">
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h1 id="textInput"></h1>
+  <script>
+    function updateTextInput(val) {
+            document.getElementById('textInput').textContent=val; 
+          }
+  </script>
+
+    <h2>Profiles</h2>
+
+    <div th:each="profile, stat : ${profiles}" class="profile-card" th:style="'background-color: ' + ${profile.favoriteColor}">
+        <img th:src="@{/images/profile-placeholder.png}" alt="Profile Picture">
+        <p th:text="${profile.name}" th:style="'font-size: ' + ${profile.fontSize}"></p>
+        <form action="/deleteProfile" method="post">
+            <input type="hidden" name="index" th:value="${stat.index}">
+            <input type="submit" value="Delete">
+        </form>
+    </div>
+</body>
+</html>
